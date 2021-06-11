@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cloud computing class- Assignment-01</title>
+    </head>
+    <div  >
+        <h1>ADB Assignment - 01 </h1>
+        <h3>Srinija Katakam</h3>
+        <h3>1001861512</h3>
+    </div>
+    <div >
+        <form action="{{ url_for("display_pic")}}" method=POST enctype=multipart/form-data >
+            <fieldset>
+                <legend>Get Image</legend><br>
+                <label for="names">Enter Name</label>
+                <input  type="text" name="names" id="names"><br><br>
+                <a href="/salaryupdate"><input type="submit" value="Get Image"></a>
+            </fieldset>
+        </form>
+    </div>
+
+            <div  >
+                <form action="" method=POST enctype=multipart/form-data >
+                    <fieldset>
+                        <legend>Display Pictures</legend><br>
+                        <label for="displaypicture">Click to view pictures of people with salary less than 99000</label><br><br>
+                        <a href="/viewPictures"><input   type="button" id="displaypicture" value="View"></a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+      
+        <div  >
+            <div  >
+                <form action="{{ url_for("keyword_update")}}" method=POST enctype=multipart/form-data >
+                    <fieldset>
+                        <legend>Update Dhruvi's Keywords</legend><br>
+                        <label for="keywordchange">Enter text to update Dhruvi's keywords</label>
+                        <input   type="text" name="keywordchange" id="keywordchange"><br><br>
+                        <a href="/keyword_update"><input type="submit" value="Update"></a>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div  >
+                <form action="{{ url_for("salary_update")}}" method=POST enctype=multipart/form-data >
+                    <fieldset>
+                        <legend>Update Salary</legend><br>
+                        <label for="salaryname">Enter Name</label>
+                        <input   type="text" name="salaryname" id="salaryname"><br><br>
+                        <label for="salary">New Salary</label>
+                        <input   type="text" name="salary" id="salary"><br><br>
+                        <a href="/salarychange"><input type="submit" value="Update"></a>
+                    </fieldset>
+                </form>
+            </div>
+           
+            <div  >
+           
+                <div  >
+                    <form action="{{ url_for("upload")}}" method=POST enctype=multipart/form-data>
+                        <fieldset>
+                            <legend>Add Picture</legend><br>
+                            <label for="addpicture">Select an image </label>
+                            <input   type="file" name="file" id="addpicture"><br><br>
+                            <a href="/upload"><input   type="submit" value="Upload">
+                        </fieldset>
+                    </form>
+                </div>
+                <div  >
+                    <form action="{{ url_for("deletePicture")}}" method=POST enctype=multipart/form-data >
+                        <fieldset>
+                            <legend>Delete Name from Database</legend><br>
+                            <label for="deleteperson">Enter a name to delete</label>
+                            <input   type="text" name="deleteperson" id="deleteperson"><br><br>
+                            <a href="/deletePicture"><input   type="submit" value="Delete"></a>
+                        </fieldset>
+                    </form>
+                </div>
+    
+    
+            </div>
+        </div>
+    </body>
+</html>
